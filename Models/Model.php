@@ -9,8 +9,22 @@ class blog extends Databases{
      * SELECT ALL blog METHOD
      * @return void
      */
-    public function blog(){
-        $blo = $this->connect()->prepare('SELECT * FROM recette');
+    public function lireblog(){
+        $blo = $this->connect()->prepare('SELECT
+        Nom,
+        prenom,
+        Telp,
+        description_text1,
+        description_text2,
+        description_text3,
+        date_publication,
+        img
+        
+       
+    FROM
+        auteur
+    INNER JOIN description ON description.Id_auteur = auteur.Id_auteur
+    INNER join textblog on textblog.Id_textblog=auteur.Id_auteur');
         $blo->execute();
         $blo = $blo->fetchALL(PDO::FETCH_ASSOC);
         return $blo;
