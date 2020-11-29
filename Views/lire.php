@@ -70,8 +70,8 @@
             <h3 class="mb-0">
             <?=$Rr['Nom'] ?>
             <?=$Rr['prenom'] ?>
-            <?=$Rr['Telp'] ?>
             </h3>
+            <p ><?=$Rr['date_publication'] ?> by <a href="#"><?=$Rr['Edition_publication'] ?></a></p>
             <div class="mb-1 text-muted">
             <?=$Rr['description_text1'] ?>
            </div>

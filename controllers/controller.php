@@ -8,3 +8,11 @@ function homeView(){
 
    require("views/lire.php");
 }
+
+
+function homearticle(){
+  $blo=new blog();
+  $blo=$blo->article();
+ 
+    require("views/article_one.php");
+ }

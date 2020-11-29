@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  sam. 28 nov. 2020 à 21:32
+-- Généré le :  Dim 29 nov. 2020 à 13:24
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.12
 
@@ -85,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `textblog` (
   `Id_auteur` int(25) NOT NULL,
   `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `date_publication` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `Edition_publication` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`Id_textblog`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -92,11 +93,11 @@ CREATE TABLE IF NOT EXISTS `textblog` (
 -- Déchargement des données de la table `textblog`
 --
 
-INSERT INTO `textblog` (`Id_textblog`, `Id_auteur`, `img`, `date_publication`) VALUES
-(1, 1, 'public/img/Adulte-Fantôme-Halloween-Fête-Sociaux-Réseaux-Publication', '20/02/2020'),
-(2, 2, 'public/img/Dy4ICIkWoAA9Qsn.jpg', '15/04/2020'),
-(3, 3, 'public/img/post-sample-image.jpg', '03/04/2020'),
-(4, 4, 'public/img/Jai-besoin-de-vous.png', '2020/09/01');
+INSERT INTO `textblog` (`Id_textblog`, `Id_auteur`, `img`, `date_publication`, `Edition_publication`) VALUES
+(1, 1, 'public/img/Adulte-Fantôme-Halloween-Fête-Sociaux-Réseaux-Publication', 'January 1, 2014', 'Atlas'),
+(2, 2, 'public/img/Dy4ICIkWoAA9Qsn.jpg', 'Mars 3,2020', 'Poche'),
+(3, 3, 'public/img/post-sample-image.jpg', 'August 5, 2020', 'Hachette '),
+(4, 4, 'public/img/Jai-besoin-de-vous.png', 'November 15,2020', 'Loisirs');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
